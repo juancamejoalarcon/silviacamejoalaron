@@ -1,0 +1,387 @@
+:root {
+    --white: #FFFFFF;
+    --black: #111111;
+    --grey: #444444;
+    --blue: #11C0DC;
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+  
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.l-heading {
+    font-family: 'Alegreya', serif;
+}
+
+.btn {
+    display: inlflex;
+    color: #fff;
+    background: var(--black);
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+}
+  
+.btn:hover {
+    background: var(--blue);
+}
+
+/* Navigation */
+
+#navbar {
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    background: var(--white);
+    color: var(--white);
+    justify-content: center;
+    z-index: 1;
+    padding: 0.5rem;
+    -webkit-box-shadow: 0px 7px 29px -8px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 7px 29px -8px rgba(0,0,0,0.61);
+    box-shadow: 0px 7px 29px -8px rgba(0,0,0,0.61);
+}
+
+#navbar .mobile {
+    display: none;
+}
+
+#navbar .navbar-content {
+    display: flex;
+}
+
+#navbar .navbar-content .widescreen {
+    display: block;
+}
+
+#navbar img {
+    max-height: 12vh;
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: var(--black);
+    font-weight: lighter;
+    padding: 0.75rem;
+        /* top right bottom left */
+    margin: 0rem 1.5rem 0rem 1.5rem;
+    border-bottom: 1px solid transparent;
+    transition: all .25s ease-in;
+}
+
+#navbar ul li a:hover {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+/* Showcase */
+
+#showcase {
+    background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+    margin-top: -50px;
+}
+
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Overlay */
+    /* position: absolute; */
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#showcase .showcase-content h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+#showcase .showcase-content p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    width: 80%;
+    font-weight: lighter;
+}
+
+/* Services */
+
+#services {
+    /* top right bottom left */
+    margin: 3rem 0rem 3rem 0rem;
+}
+
+#services .l-heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#services img {
+    width: 80%;
+    border-radius: 25px;
+    -webkit-box-shadow: 24px 17px 50px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 24px 17px 50px -10px rgba(0,0,0,0.75);
+    box-shadow: 24px 17px 50px -10px rgba(0,0,0,0.75);
+}
+
+#services .items-container .item {
+    display: flex;
+    height: 100%;
+    margin-bottom: 4rem;
+}
+
+#services .items-container .item .item-image {
+    display: flex;
+    align-items: center;
+}
+
+#services .items-container .item:nth-child(2) .item-image {
+    text-align: right;
+    justify-content: flex-end;
+}
+
+#services .items-container .item .item-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: left;
+}
+
+#services .items-container .item:nth-child(2) .item-text {
+    text-align: right;
+    align-items: right;
+}
+
+#services .items-container .item .item-text h3 {
+    text-decoration: underline;
+    font-family: 'Alegreya', serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+#services .items-container .item .item-text p {
+    font-weight: lighter;
+}
+
+/* Noticias */
+
+#noticias {
+    /* top right bottom left */
+    margin: 3rem 0rem 3rem 0rem;
+}
+
+#noticias .l-heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#noticias .articles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 5vw;
+    grid-column-gap: 10vw;
+}
+
+#noticias .article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* top right bottom left */
+    /* padding: 0rem 2rem 0rem 2rem; */
+}
+
+#noticias .article img {
+    width: 90%;
+    border: 1px solid var(--grey);
+    margin-bottom: 1rem;
+}
+
+#noticias .article h4 {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#noticias .article p {
+    font-weight: lighter;
+    line-height: 1.2;
+} 
+
+/* Contacto */
+
+#contact {
+    display: flex;
+}
+
+#contact .contact-form {
+    flex: 4;
+    background-color: #F2F2F2;
+    text-align: center;
+        /* top right bottom left */
+    padding: 2rem 6rem 2rem 6rem;
+}
+
+#contact #map {
+    flex: 6;
+}
+
+#contact .contact-form .l-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+#contact .contact-form input[type=text], input[type=email] {
+    /* top right bottom left */
+    margin: 1rem 0 1rem 0;
+    border: none;
+    /* top right bottom left */
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+    font-size: 36;
+    width: 100%;
+    color: var(--primary-color);
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+    font-size: 1.25rem;
+}
+
+
+#contact .contact-form input[type=text]::placeholder, 
+input[type=email]::placeholder {
+    color: var(--black);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding-left: 1rem;
+}
+
+#contact .contact-form textarea {
+    color: var(--black);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    border: 1px solid var(--black);
+    margin: 1.5rem 0 0rem 0;
+    border: 1px solid var(--grey);
+    border-radius: 25px;
+    height: 200px;
+    width: 100%;
+    resize: none;
+    /* top right bottom left */
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#contact .contact-form textarea::placeholder {
+    color: var(--black);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+#contact .contact-form input:focus::-webkit-input-placeholder { opacity: 0;  }
+#contact .contact-form input:focus:-moz-placeholder { opacity: 0; } /* FF 4-18 */
+#contact .contact-form input:focus::-moz-placeholder { opacity: 0; } /* FF 19+ */
+#contact .contact-form input:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
+
+#contact .contact-form textarea:focus::-webkit-input-placeholder { opacity: 0;  }
+#contact .contact-form textarea:focus:-moz-placeholder { opacity: 0; } /* FF 4-18 */
+#contact .contact-form textarea:focus::-moz-placeholder { opacity: 0; } /* FF 19+ */
+#contact .contact-form textarea:focus:-ms-input-placeholder { opacity: 0; } /* IE 10+ */
+
+#contact .contact-form textarea:focus, 
+#contact .contact-form input:focus {
+    outline: none;
+}
+
+#contact .contact-form input[type=submit] {
+    outline:none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius:40px;
+    background: var(--blue);
+    border: 1px solid var(--black);
+    color: var(--white);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 20px;
+    transition: background, color;
+    transition-duration: 0.2s;
+    padding-top: 1px;
+}
+
+#contact .contact-form input[type=submit]:hover {
+    color: var(--black);
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Footer */
+
+#main-footer {
+        /* top right bottom left */
+    padding: 2rem 1rem 2rem 1rem;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+#main-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-footer .copyright {
+    text-align: right;
+}
+
+
+

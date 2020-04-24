@@ -1,0 +1,42 @@
+#services img {
+    width: 60%;
+}
+
+#services .items-container .item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+#services .items-container .item:nth-child(2) {
+    flex-direction: column-reverse;
+}
+
+#services .items-container .item .item-image {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#services .items-container .item:nth-child(2) .item-image {
+    text-align: center;
+    justify-content: center;
+}
+
+#services .items-container .item .item-text {
+    text-align: center;
+}
+
+#services .items-container .item:nth-child(2) .item-text {
+    text-align: center;
+}
+
+#services .items-container .item .item-text h3 {
+    font-size: 1.4rem;
+}
+
+#services .items-container .item .item-text p {
+    font-size: 1rem;
+}
